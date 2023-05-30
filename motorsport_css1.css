@@ -22,6 +22,10 @@ body {
   .skills {
     margin-top: 40px;
   }
+
+  .skills li {
+    list-style-type: square;
+  }
   
   .skills h2 {
     margin-bottom: 10px;
