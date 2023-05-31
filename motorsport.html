@@ -90,13 +90,14 @@
 
             <div element = "example_project">
                 <h3>BMS firmware development</h3>
-                <p>The BMS firmware was written in embedded C/C++, and it was written to take data from the ASIC which was used to measure the battery cell data then it was stored in an object. The code was compiled in platformio ide. Furthermore, I was working on moving code from a teensy to STM32 and looking to implement RTOS.</p>
-                <p>Here is a class diagram of it.</p>
+                <p>The BMS firmware was written in embedded C/C++, and it was written to take data from the ASIC which was used to measure the battery cell data then it was stored in an object. The code was compiled in platformio ide. 
 
                 <figure>
                     <img src="images/class_diagram_code.png" alt="class diagram bms">
                     <figcaption>Class diagram of BMS firmware</figcaption>
                 </figure>
+
+                <p>The micro-controllers that were used for the BMS firmware were Teensy 3.2 and PSOC. Further initiated plans to move to a singular micro-controller which is the STM-32.</p>
 
                 <p>The BMS firmware also used unit testing, this was something new that I had learned and implemented. This was especially useful for writing cell algorithms. This was so that it can simulate the data of the car without needing to access to the car.</p>
                 <figure>
