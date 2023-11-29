@@ -98,3 +98,10 @@ body {
   a:hover {
     text-decoration: underline;
   }
+
+  .logo {
+    max-width: 80%;
+    max-height: 10%;
+    margin: 0 auto;
+    display: block;
+  }
