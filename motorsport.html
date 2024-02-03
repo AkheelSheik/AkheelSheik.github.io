@@ -33,57 +33,17 @@
                     the core element and the other circuits are peripheral to the ASIC. A lot of the project involved
                     interpreting the ASIC datasheet and how to use it. The PCB consisted of 4 layers and 10 polygons.
                     The main reason was that there was genuinely no space for routing and maintaining rules compliance
-                    for FS (formula student) competitions.</p>
+                    for FS (formula student) competitions. </p>
                 <figure>
-                    <img src="images/top_level.png" alt="Top level of the pcb">
+                    <img src="images/spineboard_pic.png" alt="Top level of the pcb">
                     <figcaption>PCB with all layers</figcaption>
                 </figure>
 
-                <p>The top layer consisted of a lot of the signal routing and had 2 small polygons. The 2 polygons were
-                    ground planes. This was to further increase the capacitance to ground by having ground plane that
-                    surrounded the main ICs(integrated circuits), so there is limited high frequency noise in the power
-                    signals of the ICs.</p>
-                <figure>
-                    <img src="images/top_layer.png" alt="top layer">
-                    <figcaption>Top layer of the PCB</figcaption>
-                </figure>
-
-                <p>The second layer consisted of ground planes and very low amount of routing. Two reasons for this,
-                    first reason is that generally the middle layers of the board will be ground planes to reduce noise
-                    in digital signals. Furthermore, makes manufacturability of PCBs a lot easier. As these copper
-                    planes won't be needed to be cut as much.</p>
-                <figure>
-                    <img src="images/second_layer.png">
-                    <figcaption>Second layer of the PCB</figcaption>
-                </figure>
-
-                <p>The third layer contains ground planes but also has the power plane. This again was done for
-                    manufacturability of the PCB has having common power rails means less routing between components and
-                    it can be just connected to one plane.</p>
-                <figure>
-                    <img src="images/third_layer.png">
-                    <figcaption>Third layer of the PCB</figcaption>
-                </figure>
-                <p>The fourth layer also consisted a lot of digital signal routing.</p>
-                <figure>
-                    <img src="images/fourth_layer.png">
-                    <figcaption>Fourth layer of the PCB</figcaption>
-                </figure>
             </div>
             <div element="example_project">
                 <h3>Documentation of BMS Debugging</h3>
-                <p>In this testing report it showcases some of the steps taken to debug a PCB and it ends as soon as one
-                    of the important ICs gets damaged. This testing report also shows the shortcomings of the old
-                    testing method without the testing board. In additon, generally to debug what was going on with
-                    board there was a lot serial communication through the console with the microcontroller that was
-                    used for debugging. </p>
-                <p><a href="images/example_testing_report.pdf">Link to a testing report</a></p>
-
-                <p>In this documentation, there is an accumulation of all the common problems into one document and this
-                    was done so debugging can become more streamlined. Furthermore, it is easier to learn the part for
-                    future electrical systems engineers working on the project.</p>
-                <p><a href="images/Failure Points Analysis.pdf">Link to common problems debugging</a></p>
-
+                <p> It was paramount to document all BMS debugging as this would be vital to reflect on the design and short-comings that was observed through testing.
+                     Furthermore, I had to use tools such as oscilloscopes and function generator. </p>
             </div>
 
 
@@ -110,31 +70,18 @@
                     simpler in the sense that it was majorly consisted of And/Or gate ICs. It contained an output power
                     stage to provide power to high power LEDs. In addition, contains a lot of debugging LEDs; this was
                     so that it was easier to debug the PCB and ensuring that the functionality of the PCB was tested.
-                    This was important as this PCB is a rules critical PCB in FS competition.</p>
+                    This was important as this PCB is a Safety critical PCB in FS competition.</p>
                 <figure>
-                    <img src="images/tsal_controller.png">
+                    <img src="images/tsal_pic.png">
                     <figcaption>TSAL controller PCB</figcaption>
-
                 </figure>
             </div>
 
             <div element="example_project">
                 <h3>BMS firmware development</h3>
                 <p>The BMS firmware was written in embedded C/C++, and it was written to take data from the ASIC which
-                    was used to measure the battery cell data then it was stored in an object. The code was compiled in
-                    platformio ide.
-
-                <figure>
-                    <img src="images/class_diagram_code.png" alt="class diagram bms">
-                    <figcaption>Class diagram of BMS firmware</figcaption>
-                </figure>
-
-                <p>The micro-controllers that were used for the BMS firmware were Teensy 3.2 and PSOC. Further initiated
-                    plans to move to a singular micro-controller which is the STM-32.</p>
-
-                <p>The BMS firmware also used unit testing, this was something new that I had learned and implemented.
-                    This was especially useful for writing cell algorithms. This was so that it can simulate the data of
-                    the car without needing to access to the car.</p>
+                    was used to measure the battery cell data then it was stored in an object. The micro-controllers that were used for the BMS firmware were Teensy 3.2 and PSOC. Further initiated plans to move to a singular micro-controller which is the STM-32. It also used unit testing, which was something new that I had learned and implemented. This was especially useful for writing cell algorithms and was useful to simulate the data of
+                    the car without needing to access to the car.
                 <figure>
                     <img src="images/unit_testing_code.png" alt="unit testing code">
                     <figcaption>Example of unit testing code</figcaption>
