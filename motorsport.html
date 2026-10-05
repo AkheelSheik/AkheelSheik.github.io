@@ -29,10 +29,10 @@
             <div element="example_project">
                 <h3>Battery Management PCB</h3>
 
-                <p>The purpose of this PCB was to monitor 22 battery cells. This involved using an ASIC as
-                    the core element and the other circuits are peripheral to the ASIC. A lot of the project involved
-                    interpreting the ASIC datasheet and how to use it. The PCB consisted of 4 layers and 10 polygons.
-                    The main reason was that there was genuinely no space for routing and maintaining rules compliance
+                <p>The purpose of this PCB was to monitor 22 lithium battery cells. This involved using an ASIC as
+                    the core element and the other circuits that are peripheral to the ASIC. Most of the project involved
+                    interpreting the ASIC datasheet. The PCB consisted of 4 layers and 10 polygons.
+                    The main reason for 4 layers was that there was genuinely no space for routing and also to maintain rules compliance
                     for FS (formula student) competitions. </p>
                 <figure>
                     <img src="images/spineboard_pic.png" alt="Top level of the pcb">
@@ -42,8 +42,8 @@
             </div>
             <div element="example_project">
                 <h3>Documentation of BMS Debugging</h3>
-                <p> It was paramount to document all BMS debugging as this would be vital to reflect on the design and short-comings that was observed through testing.
-                     Furthermore, I had to use tools such as oscilloscopes and function generator. </p>
+                <p> It was paramount to document all BMS debugging as this would be vital to reflect on the short-comings of the design that was observed through testing.
+                     Furthermore, I had to use tools such as oscilloscopes to debug signals. </p>
             </div>
 
 
@@ -53,7 +53,7 @@
                     the battery management PCB above had 23 cells, and it was a nightmare to test the functionality as
                     there was about 46 inputs to simulate, and this had to be manually soldered on to the rectangular
                     taps. Hence this PCB consisted of testing pins and simulate the input the signals to the battery
-                    management PCB. This led to faster PCB testing as the initial set up time was very low.</p>
+                    management PCB. This led to faster PCB testing as the initial set up time was high however subsequent boards for testing was done relatively fast.</p>
                 <figure>
                     <img src="images/Testing_board_pcb.png">
                     <figcaption>Testing board PCB</figcaption>
@@ -82,10 +82,6 @@
                 <p>The BMS firmware was written in embedded C/C++, and it was written to take data from the ASIC which
                     was used to measure the battery cell data then it was stored in an object. The micro-controllers that were used for the BMS firmware were Teensy 3.2 and PSOC. Further initiated plans to move to a singular micro-controller which is the STM-32. It also used unit testing, which was something new that I had learned and implemented. This was especially useful for writing cell algorithms and was useful to simulate the data of
                     the car without needing to access to the car.
-                <figure>
-                    <img src="images/unit_testing_code.png" alt="unit testing code">
-                    <figcaption>Example of unit testing code</figcaption>
-                </figure>
             </div>
         </div>
 
